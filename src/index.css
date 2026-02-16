@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* App background */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Light mode */
+.app.light {
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+  color: #222;
+}
+
+/* Dark mode */
+.app.dark {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* Card container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.app-title {
+  font-size: 2rem;
+  margin: 20px 0;
+  margin-right: 1rem;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app.dark .app-title {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search input,
+.search button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+.app.light .search input,
+.app.light .search button {
+  background: #fff;
+  color: #333;
+}
+
+.app.dark .search input,
+.app.dark .search button {
+  background: #333;
+  color: #f1f1f1;
+  border-color: #555;
+}
