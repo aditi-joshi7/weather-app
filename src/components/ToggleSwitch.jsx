@@ -1,15 +1,12 @@
 import React from "react";
 import "./toggle.css";
 
-function ToggleSwitch({ label, checked, onChange }) {
+function ToggleSwitch({ checked, onChange }) {
   return (
-    <div className="toggle-row">
-      <span>{label}</span>
-      <label className="switch">
-        <input type="checkbox" checked={checked} onChange={onChange} />
-        <span className="slider"></span>
-      </label>
-    </div>
+    <label className="switch">
+      <input type="checkbox" checked={checked} onChange={onChange} />
+      <span className="slider"></span>
+    </label>
   );
 }
 

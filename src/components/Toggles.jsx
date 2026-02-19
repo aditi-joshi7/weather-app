@@ -1,20 +1,14 @@
 import React from "react";
 import ToggleSwitch from "./ToggleSwitch";
 
-function Toggles({
-  isCelsius,
-  setIsCelsius,
-  showUnitToggle,
-}) {
+function Toggles({ isCelsius, setIsCelsius }) {
   return (
     <div className="toggles-container">
-      {showUnitToggle && (
-        <ToggleSwitch
-          label="°C / °F"
-          checked={isCelsius}
-          onChange={() => setIsCelsius(!isCelsius)}
-        />
-      )}
+      <ToggleSwitch
+        label="°C / °F"
+        checked={isCelsius}
+        onChange={() => setIsCelsius(!isCelsius)}
+      />
     </div>
   );
 }

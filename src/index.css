@@ -8,8 +8,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding-top: 80px; /* Space for fixed header */
+  box-sizing: border-box;
 }
 
 /* Light mode */
@@ -25,12 +26,20 @@ body {
 }
 
 /* Card container */
-.container {
+.search-container,
+.weather-container {
   background: rgba(255, 255, 255, 0.15);
-  padding: 30px;
+  padding: 20px;
   border-radius: 16px;
-  width: 350px;
+  width: 90%;
+  max-width: 500px;
   text-align: center;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.weather-container {
+  overflow-y: visible;
 }
 
 .app-header {
@@ -49,13 +58,17 @@ body {
   margin-right: 1rem;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .app.dark .app-title {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to right, #4169e1, #00ffff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .search input,
